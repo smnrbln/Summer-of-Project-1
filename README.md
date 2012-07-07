@@ -1,32 +1,18 @@
-######Summer-Of-Project/Project Management System:Bir Proje Yönetim Sistemidir.
+## Project Management System
 
-Bitirme Projeleri başta olmak üzere ders bağlamında ki projelerin yönetimi amaçlanmakatadır.
 
-**- Hoca(Author) türünde ki kullanıcı,**
+**Neler Yapıldı?**
 
-``+ proje önerisi yükleyebilir``
+- ``Login`` girişi oluşturuldu.
 
-``+ projeyi değerlendirir: başarılı/başarısız; rapor yazar``
+- ``Proje modeli`` ``scaffold`` ile oluşturuldu.
 
-**- Öğrenci(Student) türünde ki kullanıcı,**
+- ``User modeli`` ve ``roller`` tanımlandı.
 
-``+ grup tercihi oluşturabilir``
+- ``Cancan`` ile ``yetkiler`` tanımlandı.
 
-``+ grubunu görebilir``
 
-``+ grup yöneticisi seçilir``
-
-``+ grup yöneticisi proje tercihinde bulunur``
-
-``+ proje görülür``
-
-``+ proje belgeleri yüklenir: tez metni``
-
-**-Yönetici(Admin),**
-
-``TODO:Admin görevleri eklenecek``
-
-**Nasıl Çalıştırılır??**
+**Nasıl Çalıştırılır?**
 
 1. Klonla
 `` $ git clone..``
@@ -42,5 +28,5 @@ Bitirme Projeleri başta olmak üzere ders bağlamında ki projelerin yönetimi 
 4. Sunucuyu çalıştır
 `` $ rails s``
 
-5. Yerelde çalıştır
+5. Web tarayıcısını aç
 `` localhost:3000 ``
