@@ -23,7 +23,7 @@
 3. Veritabanını güncelle
 `` $ rake db:migrate``
 
-`` $ rake db:seed``
+ `` $ rake db:seed``
 
 4. Sunucuyu çalıştır
 `` $ rails s``
