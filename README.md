@@ -1,4 +1,4 @@
-######Pys:Bir Proje Yönetim Sistemidir.
+###### Bir Proje Yönetim Sistemi
 
 Bitirme Projeleri başta olmak üzere ders bağlamında ki projelerin yönetimi amaçlanmakatadır.
 
