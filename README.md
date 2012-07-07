@@ -1,4 +1,4 @@
-###### Bir Proje Yönetim Sistemi
+######Summer-Of-Project/Project Management System:Bir Proje Yönetim Sistemidir.
 
 Bitirme Projeleri başta olmak üzere ders bağlamında ki projelerin yönetimi amaçlanmakatadır.
 
@@ -36,6 +36,8 @@ Bitirme Projeleri başta olmak üzere ders bağlamında ki projelerin yönetimi 
 
 3. Veritabanını güncelle
 `` $ rake db:migrate``
+
+`` $ rake db:seed``
 
 4. Sunucuyu çalıştır
 `` $ rails s``
