@@ -30,3 +30,6 @@
 
 5. Web tarayıcısını aç
 `` localhost:3000 ``
+
+**Demosu Burada Yapılacak**
+http://summer-of-project-demo.herokuapp.com/
