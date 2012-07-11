@@ -33,4 +33,4 @@
 
 **Demosu Burada Yapılacak**
 
-http://http://fatih-pys.herokuapp.com/
+=> http://fatih-pys.herokuapp.com/
