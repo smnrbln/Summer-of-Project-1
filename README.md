@@ -11,6 +11,9 @@
 
 - ``Cancan`` ile ``yetkiler`` tanımlandı.
 
+- Aylık proje raporlarının yüklenmesi için  ``file uploader`` modeli oluşturuldu. 
+
+
 
 **Nasıl Çalıştırılır?**
 
