@@ -1,0 +1,8 @@
+<% if  @groups.project_id %>
+	Your Project:<br />Title: <%= @project.title %><br />
+	Detail:  <%= @project.content %><br />
+	Add Report:
+<% else %>
+	Click below to see projects:
+	<%= link_to 'Project', projects_path %>
+<% end %>
