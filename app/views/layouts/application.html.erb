@@ -9,10 +9,10 @@
 <body>
  <p>
     <% if @current_user  %>
-      (: WELCOME..  <b><%= @current_user.username %></b> |
+      (: HOŞGELDİN..  <b><%= @current_user.username %></b> |
       <%= link_to "EXIT", logout_url %>
     <% else %>
-      Have not logged in..! |
+      Giriş yapmamışsın..! |
       <%= link_to "LOGIN", login_url %>
     <% end %>
   </p>

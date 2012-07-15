@@ -2,19 +2,20 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    user ||= User.new # guest user (not logged in)
+   user ||= User.new # guest user (not logged in)
 
-    if user.role? :Student
-      can :read, Project
+    if user.role? :Ogrenci
+      can :read, Proje
     end
 
-    if user.role? :Author
-      can :manage, Project, :user_id => user.id
-      can :read, Project
+    if user.role? :Hoca
+      can :manage, Proje, :user_id => user.id
+      can :read, Proje
     end
 
     if user.role? :Admin
-      can :manage, Project
+      can :manage, Proje
     end
+   
   end
 end

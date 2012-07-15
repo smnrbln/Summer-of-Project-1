@@ -3,11 +3,11 @@ class CreateUsers < ActiveRecord::Migration
     create_table :users do |t|
       t.string :username
       t.string :password_digest
-      t.string :name
-      t.string :surname
+      t.string :ad
+      t.string :soyad
       t.string :email
-      t.string :phone
-      t.string :s_number
+      t.string :telno
+      t.string :okulno
 
       t.timestamps
     end

@@ -1,0 +1,31 @@
+<h1>Proje Listesi</h1>
+
+<table>
+  <tr>
+    <th>Proje Adı</th>
+    <th>Projenin İçeriği</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @projes.each do |proje| %>
+  <tr>
+    <td><%= proje.title %></td>
+    <td><%= proje.content %></td>
+    <td><%= link_to 'Show', proje %></td>
+    <% if can? :edit, proje %>
+      <td><%= link_to 'Edit', edit_proje_path(proje) %></td>
+    <% end %>
+    <% if can? :destroy, proje %>
+      <td><%= link_to 'Destroy', proje, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<% if can? :create, Proje %>
+  <%= link_to 'New Proje', new_proje_path %>
+<% end %>

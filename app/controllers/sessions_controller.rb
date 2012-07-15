@@ -6,9 +6,9 @@ class SessionsController < ApplicationController
     user = User.find_by_username(params[:username])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to projects_path
+      redirect_to projes_path
     else
-      flash.now.alert = "Invalid username or password"
+      flash.now.alert = "Gecersiz parola veya kullanici adi..!"
       render "new"
     end
   end

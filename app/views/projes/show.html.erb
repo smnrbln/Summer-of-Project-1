@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Proje Adı:</b>
+  <%= @proje.title %>
+</p>
+
+<p>
+  <b>Projenin İçeriği:</b>
+  <%= @proje.content %>
+</p>
+
+
+<% if can? :edit, @proje %>
+  <%= link_to 'Edit', edit_proje_path(@proje) %>
+<% end %>
+<%= link_to 'Back', projes_path %>
+
+
+
