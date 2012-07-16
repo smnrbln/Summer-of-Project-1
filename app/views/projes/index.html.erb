@@ -1,25 +1,38 @@
-<h1>Proje Listesi</h1>
+<p></p>
+<h2>Proje Listesi</h2>
+<p></p>
 
 <table>
   <tr>
     <th>Proje Adı</th>
-    <th>Projenin İçeriği</th>
     <th></th>
+    <th></th>
+    <th></th>
+    <th>Projenin İçeriği</th>
     <th></th>
     <th></th>
   </tr>
 
+<p></p>
 <% @projes.each do |proje| %>
   <tr>
     <td><%= proje.title %></td>
+    <td></td>
+    <td></td>
+    <td></td>
     <td><%= proje.content %></td>
-    <td><%= link_to 'Show', proje %></td>
+
+    <td><%= link_to 'Show', proje %></td> 
+    <td></td>
     <% if can? :edit, proje %>
       <td><%= link_to 'Edit', edit_proje_path(proje) %></td>
-    <% end %>
+    <% end %> 
+     <td></td>
     <% if can? :destroy, proje %>
-      <td><%= link_to 'Destroy', proje, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+     
+   <td><%= link_to 'Destroy', proje, method: :delete, data: { confirm: 'Are you sure?' } %></td> 
     <% end %>
+    <td></td>
   </tr>
 <% end %>
 </table>

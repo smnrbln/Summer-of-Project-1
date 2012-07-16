@@ -1,18 +1,32 @@
-<h1>Proje Yönetim Sistemi</h1>
+<p></p>
 
-<h2>Login</h2>
+<h2>Proje Yönetim Sistemi</h2>
+
+<p></p>
+
+<h4>Login</h4>
+
+<p></p>
 <%= form_tag sessions_path do %>
+
+<p>
 <div class="field">
   <%= label_tag "Username" %>
   <%= text_field_tag :username, params[:username] %>
 </div>
+</p>
+
+<p>
 <div class="field">
   <%= label_tag :password %>
   <%= password_field_tag :password %>
 </div>
+</p>
+<p>
 <div class="actions">
   <%= submit_tag "Login" %>
 </div>
+</p>
 <% end %>
 
 <p><i><b> edit by ftastemur </b></i></p>
