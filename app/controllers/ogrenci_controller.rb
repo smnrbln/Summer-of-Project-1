@@ -24,14 +24,15 @@ class OgrenciController < ApplicationController
       @groups = Group.update(current_user.group_id, proje_id:params[:proje_ids].join)
       @proje = Proje.update(params[:proje_ids].join, group_id:current_user.group_id)
       if @groups
-        redirect_to '/ogrenci/index', notice:"Başarılı bir şekilde proje seçilmiştir."
+        redirect_to '/ogrenci/index', notice:"Proje seçimi tamamlandı."
       else
-        redirect_to '/projes', notice: "Proje seçimi başarız."
+        redirect_to '/projes', notice:"Proje seçimi başarısız."
       end
     end
   end
 
   def rapor
+  #TODO:File_Uploader
   end
 
 end
