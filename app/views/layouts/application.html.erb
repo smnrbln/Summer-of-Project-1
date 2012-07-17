@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SummerOfProject</title>
+  <title><%= t 'title' %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  
   <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t 'languages' %><b class="caret"></b></a>
   <ul class="dropdown-menu">
@@ -16,19 +15,19 @@
     <li><a href="?locale=en">English</a></li>
     <li><a href="?locale=ru">Русский</a></li>
   </ul>
-  </li> 
-
+  </li>
   <p>
-    <% if @current_user  %>
-     <h5> (: HOŞGELDİN..</h5>
-     <b><%= @current_user.username %></b> |
+    <% if current_user  %>
+      Hoşgeldin <b><%= current_user.username %></b> |
       <%= link_to "Çıkış", logout_url %>
     <% else %>
-      Giriş yapmamışsın..! |
-      <%= link_to "Giriş Yap", login_url %>
+      Giriş yapmamışsınız |
+      <%= link_to "Giriş yap", login_url %>
     <% end %>
   </p>
-     
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, :id => "flash_#{name}" %>
+  <% end %>
 <%= yield %>
 
 </body>

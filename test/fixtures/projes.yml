@@ -1,9 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  title: MyString
-  content: MyText
+  ad: MyString
+  amac: MyText
+  islevsel: MyText
+  ioislevsel: MyText
+  rapor: MyText
+  teknoloji: MyString
+  tedosya: MyString
 
 two:
-  title: MyString
-  content: MyText
+  ad: MyString
+  amac: MyText
+  islevsel: MyText
+  ioislevsel: MyText
+  rapor: MyText
+  teknoloji: MyString
+  tedosya: MyString

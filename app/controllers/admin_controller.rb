@@ -20,9 +20,9 @@ class AdminController < ApplicationController
       end
 
       if @ogrenci
-        redirect_to '/admin/groups', notice: "Başarılı bir şekilde grup oluşturuldu."
+        redirect_to '/admin/groups', notice: "Başarılı bir şekilde grup oluşturulmuştur."
       else
-        redirect_to admin_index_path, notice: "Grup oluşturulamadı."
+        redirect_to admin_index_path, notice: "Grup oluturulamadı."
       end
     else
       redirect_to admin_index_path, notice: "Grup oluşturulamadı. Lütfen öğrenci seçeneklerini işaretleyiniz."

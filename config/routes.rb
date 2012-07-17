@@ -1,11 +1,17 @@
 SummerOfProject::Application.routes.draw do
-  resources :projes
+
+  get "admin/index"
+
+  get "ogrenci/index"
+  match "admin/groups" => "admin#groups"
+  match "admin/create_groups" => "admin#creategroup"
   resources :sessions
-  resources :upload
+  resources :projes
 
-  get "login" => "sessions#new", :as => "login"
-  get "logout" => "sessions#destroy", :as => "logout"
-  get 'upload/index'
+  get "login" => "sessions#new", as: "login"
+  get "logout" => "sessions#destroy", as: "logout"
 
-  root :to => 'sessions#new'
+  match "ogrenci/index" => "ogrenci#selectproje"
+  match "ogrenci/index" => "ogrenci#rapor"
+  root to: 'sessions#new'
 end

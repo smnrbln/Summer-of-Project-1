@@ -1,3 +1,4 @@
+#encoding: utf-8
 class ProjesController < ApplicationController
   load_and_authorize_resource
   # GET /projes
@@ -42,6 +43,7 @@ class ProjesController < ApplicationController
   # POST /projes.json
   def create
     @proje = Proje.new(params[:proje])
+    @proje.user = current_user
 
     respond_to do |format|
       if @proje.save
@@ -58,6 +60,7 @@ class ProjesController < ApplicationController
   # PUT /projes/1.json
   def update
     @proje = Proje.find(params[:id])
+    @proje.user = current_user
 
     respond_to do |format|
       if @proje.update_attributes(params[:proje])
