@@ -7,9 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
- <p>
+  
+  <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t 'languages' %><b class="caret"></b></a>
+  <ul class="dropdown-menu">
+    <li><a href="?locale=tr">Türkçe</a></li>
+    <li class="divider"></li>
+    <li><a href="?locale=en">English</a></li>
+    <li><a href="?locale=ru">Русский</a></li>
+  </ul>
+  </li> 
+
+  <p>
     <% if @current_user  %>
-     <h6> (: HOŞGELDİN..</h6>
+     <h5> (: HOŞGELDİN..</h5>
      <b><%= @current_user.username %></b> |
       <%= link_to "Çıkış", logout_url %>
     <% else %>
@@ -17,7 +28,7 @@
       <%= link_to "Giriş Yap", login_url %>
     <% end %>
   </p>
-
+     
 <%= yield %>
 
 </body>

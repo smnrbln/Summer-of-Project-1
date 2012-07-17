@@ -7,7 +7,11 @@ class Ability
     if user.role? :Ogrenci
       can :read, Proje
     end
-
+    
+    if user.role? :gyonetici
+      can :read, Proje
+    end
+    
     if user.role? :Hoca
       can :manage, Proje, :user_id => user.id
       can :read, Proje
