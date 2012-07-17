@@ -1,7 +1,10 @@
-Projelerin görmek için <%= link_to "Proje", projes_path %> linkini tıklayınız.
+Proje listesi için <%= link_to "Proje", projes_path %> linkini tıklayınız.
+<t></t>
 <br />
-Öğrenci gruplarını görmek için <%= link_to "Gruplar", '/admin/groups' %> tıklayınız.
+<p></p>
+Öğrenci grupları için <%= link_to "Gruplar", '/admin/groups' %> tıklayınız.
 <br />
+<p></p>
 
 Öğrenci listesi
 
@@ -9,8 +12,11 @@ Projelerin görmek için <%= link_to "Proje", projes_path %> linkini tıklayın�
   <tr>
     <th></th>
     <th>No</th>
+    <th></th>
     <th>Ad</th>
+    <th></th>
     <th>Soyad</th>
+    <th></th>
     <th>Email</th>
     <th></th>
   </tr>
@@ -18,9 +24,13 @@ Projelerin görmek için <%= link_to "Proje", projes_path %> linkini tıklayın�
 <% @ogrenci.each do |ogrenci| %>
   <tr>
     <td><%= check_box_tag "ogrenci_ids[]", ogrenci.id %></td>
+    <td></td>
     <td><%= ogrenci.okulno %></td>
+    <td></td>
     <td><%= ogrenci.ad %></td>
+    <td></td>
     <td><%= ogrenci.soyad %></td>
+    <td></td>
     <td><%= ogrenci.email %></td>
   </tr>
 <% end %>

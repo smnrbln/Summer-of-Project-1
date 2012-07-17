@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= t 'title' %></title>
+  <title><%= t 'welcome.title' %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
   <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t 'languages' %><b class="caret"></b></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t 'welcome.languages' %><b class="caret"></b></a>
   <ul class="dropdown-menu">
     <li><a href="?locale=tr">Türkçe</a></li>
     <li class="divider"></li>
@@ -18,11 +18,11 @@
   </li>
   <p>
     <% if current_user  %>
-      Hoşgeldin <b><%= current_user.username %></b> |
-      <%= link_to "Çıkış", logout_url %>
+      <%= t 'welcome.welcome' %> <b><%= current_user.username %></b> |
+      <%= t('welcome.log_out_message', :url => logout_url) %>
     <% else %>
-      Giriş yapmamışsınız |
-      <%= link_to "Giriş yap", login_url %>
+      <%= t 'welcome.log_in' %> |
+      <%= t 'welcome.log_in_message', :url => link_to(t("log_in"), login_url) %>
     <% end %>
   </p>
   <% flash.each do |name, msg| %>

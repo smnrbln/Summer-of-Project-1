@@ -26,13 +26,12 @@ class OgrenciController < ApplicationController
       if @groups
         redirect_to '/ogrenci/index', notice:"Başarılı bir şekilde proje seçilmiştir."
       else
-        redirect_to '/projes', notice: "Proje seçimi başarısız."
+        redirect_to '/projes', notice: "Proje seçimi başarız."
       end
     end
   end
 
-  def report
-  #TODO
+  def rapor
   end
 
 end

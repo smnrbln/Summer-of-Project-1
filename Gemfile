@@ -5,27 +5,18 @@ gem 'rails', '3.2.6'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-group :test, :development do
-  gem 'sqlite3'
-end
+gem 'sqlite3'
+gem 'cancan'
 
-group :production do
-  gem 'pg'
-end
-
-
+gem 'rails-i18n'
 # Gems used only for assets and not required
 # in production environments by default.
-
-
-  
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
-  
   gem 'twitter-bootstrap-rails'
   gem 'uglifier', '>= 1.0.3'
 end
@@ -34,11 +25,6 @@ gem 'jquery-rails'
 
 gem 'execjs'
 gem 'therubyracer'
-
-gem 'devise'
-gem 'cancan'
-gem 'rails-i18n'
-
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
 

@@ -1,3 +1,8 @@
 tr:
-  title: "Proje"
-  languages: "Dil"
+  welcome:
+    title: "Proje Yönetim Sistemi"
+    languages: "Dil Seçenekleri"
+    welcome: "Hoşgeldin"
+    log_in: "Giriş yapmamışsınız."
+    log_in_message: "Giriş Yap"
+    log_out_message: "Çıkış Yap"

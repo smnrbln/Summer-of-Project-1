@@ -16,7 +16,7 @@
   
 **TODO:Yapılacaklar**
 
-- ``i18n gem`` ile language translateüzerinde çalışılıyor..
+- ``i18n gem`` ile language translate üzerinde çalışılıyor..
 
 - ``bootstrap/bootswatch`` ile görsel zenginlik sağlanacak..
 

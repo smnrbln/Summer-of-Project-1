@@ -2,5 +2,10 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  title: "Summer of Project"
-  languages: "Languages"
+  welcome:
+    title: "Project Management System"
+    languages: "Languages"
+    welcome: "Welcome"
+    log_in: "You are not login"
+    log_in_message: "Log in"
+    log_out_message: "Sign Out"
