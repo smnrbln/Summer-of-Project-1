@@ -1,0 +1,2 @@
+class Ogrenci < User
+end
