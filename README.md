@@ -11,7 +11,16 @@
 
 - ``Cancan`` ile ``yetkiler`` tanımlandı.
 
-- Aylık proje raporlarının yüklenmesi için  ``file uploader`` modeli oluşturuldu. 
+-  ``Admin Paneli`` , ``proje seçimi`` ve ``gruplara öğrenci ekleme``  modelleri hazırlandı.
+  
+  
+**TODO:Yapılacaklar**
+
+- ``i18n gem`` ile language translateüzerinde çalışılıyor..
+
+- ``bootstrap/bootswatch`` ile görsel zenginlik sağlanacak..
+
+- ``rapor ekleme`` özelliği eklenecek..
 
 
 
