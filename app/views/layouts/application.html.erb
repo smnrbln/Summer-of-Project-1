@@ -7,6 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+   <!-- main-bar -->
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">Proje Yönetim Sistemi</a>
+          <ul class="nav">
+         
+          
+
+<!-- i18n -->
+ 
   <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t 'welcome.languages' %><b class="caret"></b></a>
   <ul class="dropdown-menu">
@@ -16,7 +27,17 @@
     <li><a href="?locale=ru">Русский</a></li>
   </ul>
   </li>
-  <p>
+  <li>
+  <% if @current_user  %>
+      (: WELCOME..  <b><%= @current_user.username %></b> 
+ <% end %>
+</li>
+
+</ul>
+</div>
+</div>
+</div>
+<p>
      <% if @current_user  %>
       (: WELCOME..  <b><%= @current_user.username %></b> |
       <%= link_to "ÇIKIŞ", logout_url %>
@@ -29,6 +50,19 @@
     <%= content_tag :div, msg, :id => "flash_#{name}" %>
   <% end %>
 <%= yield %>
+  
+    
+<!-- footer -->
+
+<div class="navbar navbar-fixed-bottom">
+      <div class="navbar-inner">
+        <div class="container">
+          <ul class="nav">
+            <li><a href="/">Summer-of-Project &copy; <%= Time.now.year %> <a></li>
+</ul>
+</div>
+</div>
+<!-- /footer -->
 
 </body>
 </html>
