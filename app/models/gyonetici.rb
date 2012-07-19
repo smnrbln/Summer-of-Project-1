@@ -1,0 +1,2 @@
+class Gyonetici < User
+end
