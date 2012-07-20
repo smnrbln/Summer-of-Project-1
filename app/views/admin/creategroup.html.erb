@@ -3,3 +3,39 @@ TODO
 <%= params[:ogrenci_ids] %>
 <%= params[:ogrenci] %>
 <%= @group.user %>
+
+<p>
+<t></t>
+ <h6> <b class="icon-list-alt"> Öğrenci listesi </b></h6>
+
+<table>
+  <tr>
+    <th></th>
+    <th>No</th>
+    <th></th>
+    <th>Ad</th>
+    <th></th>
+    <th>Soyad</th>
+    <th></th>
+    <th>Email</th>
+    <th></th>
+  </tr>
+<%= form_tag( controller:"admin", action:"creategroup") do %>
+<% @ogrenci.each do |ogrenci| %>
+  <tr>
+    <td><%= check_box_tag "ogrenci_ids[]", ogrenci.id %></td>
+    <td></td>
+    <td><%= ogrenci.okulno %></td>
+    <td></td>
+    <td><%= ogrenci.ad %></td>
+    <td></td>
+    <td><%= ogrenci.soyad %></td>
+    <td></td>
+    <td><%= ogrenci.email %></td>
+  </tr>
+<% end %>
+<%= text_field_tag(:name) %>
+<%= submit_tag "Oluştur" %>
+</table>
+<% end %>
+</p>

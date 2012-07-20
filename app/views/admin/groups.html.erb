@@ -1,23 +1,18 @@
-<table>
+<table class="table table-bordered">
   <tr>
     <th>Grup ID</th>
-    <th></th>
-    <th></th>
+    
     <th>Grup Adı</th> 
-    <th></th>
-    <th></th>    
+       
     <th>Grup Üyeleri</th> 
-    <th></th>
-    <th></th>
+    
   </tr>
 <% @groups.each do |g| %>
   <tr>
     <td><%= g.id %></td>
-    <td></td>
-    <td></td> 
+    
     <td><%= g.name %></td>
-    <td></td>
-    <td></td> 
+    
     <td><% g.user.each do |i| %>
                 <%= i.id %>
                 <%= i.ad %>
