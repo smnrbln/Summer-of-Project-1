@@ -1,12 +1,20 @@
-Proje listesi için <%= link_to "Proje", projes_path %> linkini tıklayınız.
-<t></t>
-<br />
-<p></p>
-Öğrenci grupları için <%= link_to "Gruplar", '/admin/groups' %> tıklayınız.
-<br />
-<p></p>
 
-Öğrenci listesi
+<ul class="nav nav-list">
+<li class="nav-header">
+ <b class="icon-book"></b>Admin Menü
+</li>
+  <li>
+    
+    <a href="/projes">Projeler</a>
+  </li>
+  <li>
+    <a href="/admin/groups">Gruplar</a>
+  </li>
+</ul>
+
+<p>
+<t></t>
+ <h6> <b class="icon-list-alt"> Öğrenci listesi </b></h6>
 
 <table>
   <tr>
@@ -38,3 +46,4 @@ Proje listesi için <%= link_to "Proje", projes_path %> linkini tıklayınız.
 <%= submit_tag "Oluştur" %>
 </table>
 <% end %>
+</p>
