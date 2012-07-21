@@ -1,26 +1,41 @@
-<ul class="nav nav-tabs">
-  <li class="dropdown">
-    <a class="dropdown-toggle"
-       data-toggle="dropdown"
-       href="#">
-        <i class="icon-book"> Admin Menü</i>
-        <b class="caret"></b>
-      </a>
-    <ul class="dropdown-menu">
-  <li>
-    <a href="/projes">Projeler</a>
-  </li>
-  <li>
-    <a href="/admin/groups">Gruplar</a>
-  </li>
-  <li>
-  <a href="/projes/new">Proje Oluştur</a>
-  </li>
-  <li>
-  <a href="/admin/create_groups">Grup Oluştur</a>
-  </li>
+<div class="btn-group dropdown">
+  <button class="btn">Admin Menü</button>
+  <button class="btn dropdown-toggle" data-toggle="dropdown">
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="/projes">Projeler</a></li>
+    <li><a href="/admin/groups">Gruplar</a></li>
+    <li><a href="/projes">Proje Oluştur</a></li>
 </ul>
-</li>
-</ul>
+</div>  
 
+<br>           
+    
+Öğrenci listesi
 
+<table>
+  <tr>
+    <th></th>
+    <th>No</th>
+    <th>Ad</th>
+    <th>Soyad</th>
+    <th>Email</th>
+    <th></th>
+  </tr>
+<%= form_tag( controller:"admin", action:"creategroup") do %>
+<% @ogrenci.each do |ogrenci| %>
+  <tr>
+    <td><%= check_box_tag "ogrenci_ids[]", ogrenci.id %></td>
+    <td><%= ogrenci.okulno %></td>
+    <td><%= ogrenci.ad %></td>
+    <td><%= ogrenci.soyad %></td>
+    <td><%= ogrenci.email %></td>
+  </tr>
+<% end %>
+<%= text_field_tag(:name) %>
+<%= submit_tag "Oluştur" %>
+</table>
+<% end %>
+
+</br>
