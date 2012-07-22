@@ -32,7 +32,18 @@ class OgrenciController < ApplicationController
   end
 
   def rapor
-  #TODO:File_Uploader
+     @groups = Group.find(current_user.group_id)
+    if params[:rapor]
+      directory = "public/data"
+      path = File.join(directory, name)
+      @groups.rapor = File.open(path, "wb") { |f| f.write(upload['datafile'].read) }
+      @groups.save
+      if @groups
+        redirect_to '/ogrenci/rapor', notice:"Rapor Eklendi"
+      else
+        redirect_to '/ogrenci/index', notice:"Tekrar deneyiniz."
+      end
+    end
   end
 
 end

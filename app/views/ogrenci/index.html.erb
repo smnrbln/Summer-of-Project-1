@@ -1,11 +1,18 @@
-<% if  @groups.proje_id %>
+<% if @ogrenci.group_id %>
+  <% if  @groups.proje_id %>
 	Projeniz:<br />Başlık: <%= @proje.title %><br />
 	İçerik:  <%= @proje.content %><br />
-	Rapor Ekle:
-	<%= form_tag(controller:"ogrenci", action:"rapor", multipart:true ) do %>
-		<%= file_field_tag 'rapor' %>
+	<% if current_user.role == "gyonetici" %>
+	  Rapor Ekle:
+	  <%= form_tag(controller:"ogrenci", action:"rapor", multipart:true ) do %>
+	    <%= file_field_tag 'rapor' %>
+	    <%= submit_tag 'Gönder' %>
+          <% end %>
 	<% end %>
-<% else %>
+  <% else %>
 	Projeleri görmek için aşağıdaki linke tıklayınız:
 	<%= link_to 'Proje', projes_path %>
+  <% end %>
+<% else %>
+	Lütfen grup yöneticiniz ile proje seçiniz.
 <% end %>
